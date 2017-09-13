@@ -1,6 +1,11 @@
 package com.qwk.entity;
-public class Book {
 
+import java.io.Serializable;
+
+public class Book implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	
     private int id;
     private String bookName;
 
@@ -18,6 +23,11 @@ public class Book {
 
     public void setBookName(String bookName) {
         this.bookName = bookName;
+    }
+    
+    @Override
+    public String toString() {
+    	return "id: " + getId() + ",bookName: " + getBookName();
     }
 
 }

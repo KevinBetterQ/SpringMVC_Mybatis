@@ -56,8 +56,9 @@
     </bean>
   
     
-    <!--下面的配置暂时未使用 -->
-    <context:component-scan base-package="com.lmei">
+    <!--自动扫描组件 -->
+    <context:component-scan base-package="com.qwk">
+        <context:exclude-filter type="aspectj" expression="com.qwk.dao.*"/>
     </context:component-scan>
     <aop:aspectj-autoproxy proxy-target-class="true"></aop:aspectj-autoproxy>
     
